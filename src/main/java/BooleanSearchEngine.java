@@ -47,7 +47,6 @@ public class BooleanSearchEngine implements SearchEngine {
 
     @Override
     public List<PageEntry> search(String word) {
-        System.out.println(searchResults);
         String lowerCaseWord = word.toLowerCase();
         if (searchResults.containsKey(lowerCaseWord)) {
             return searchResults.get(lowerCaseWord);
