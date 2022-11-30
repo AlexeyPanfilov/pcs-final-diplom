@@ -60,7 +60,7 @@ public class BooleanSearchEngine implements SearchEngine {
         return searchMultiText(split);
     }
     private List<PageEntry> searchMultiText(String[] split) {
-        List<PageEntry> resultList = new LinkedList<>();
+        List<PageEntry> resultList = new ArrayList<>();
         Set<String> uniqueWords = Arrays.stream(split).collect(Collectors.toSet());
         for (int i = 0; i < uniqueWords.size(); i++) {
             if (searchResults.containsKey(split[i])) {
